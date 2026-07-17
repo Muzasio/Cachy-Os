@@ -20,7 +20,7 @@ cachyos-fixes/
 └── configs/            # config snippets/dotfiles specific to this CachyOS setup
 ```
 
-### `issues/`
+### `Issues`
 
 Each file covers one bug: what broke, what was tried and ruled out, the exact root cause (confirmed by command output, not assumption), the fix, and how to prevent recurrence. Format defined in `TEMPLATE.md`.
 
@@ -32,7 +32,7 @@ Current categories these fall under:
 - **Power management** — `systemd` service failures after updates, TDP/ryzenadj profile persistence
 - **Gaming/performance** — DXVK/VKD3D config drift in Bottles, controller/mouse polling and DPI resets after driver updates
 
-### `scripts/`
+### `Scripts`
 
 Working automation built for this specific machine and use case — not generic tutorials. Includes things like:
 
@@ -42,7 +42,7 @@ Working automation built for this specific machine and use case — not generic 
 
 Each script gets a short header comment stating what it assumes about the system (hardware, kernel modules, installed packages) since these are not meant to run blind on an unrelated machine.
 
-### `configs/`
+### `Configs`
 
 Non-secret configuration files worth version-controlling: PipeWire `filter-chain` definitions, `pacman.conf` patterns (correct `IgnorePkg` placement, etc.), systemd unit overrides.
 
