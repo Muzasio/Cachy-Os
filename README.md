@@ -9,16 +9,6 @@ A maintained log of CachyOS-specific bugs, package regressions, and system confi
 
 Every entry follows one rule: document the root cause and the fix that actually worked, including the approaches that looked correct but weren't. Most Arch/CachyOS troubleshooting guides online show only the final fix; this repo keeps the failed attempts too, because knowing what *doesn't* work saves as much time as knowing what does.
 
-## Structure
-
-```
-cachyos-fixes/
-├── README.md
-├── TEMPLATE.md
-├── issues/            # documented bugs: symptom → root cause → fix → prevention
-├── scripts/            # standalone scripts for recurring CachyOS maintenance
-└── configs/            # config snippets/dotfiles specific to this CachyOS setup
-```
 
 ### `Issues`
 
