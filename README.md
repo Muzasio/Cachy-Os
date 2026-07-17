@@ -39,7 +39,11 @@ Non-secret configuration files worth version-controlling: PipeWire `filter-chain
 
 ## After Update Fix
 
-| # | Category | Symptom | Root cause | Fix |
+| # | Fix | Symptom | Root Cause |
+|---|---|---|---|
+| 001 | [Spectacle Print Screen](After-Update-Fix/Spectacle-PrintScreen-fix.md) | Print Screen fails silently after `pacman -Syu` | `libjxl` soname bump (0.11→0.12) ahead of dependent package rebuild |
+| 002 | [Tor Browser](After-Update-Fix/Tor%20Browser.md) | Silent audio, broken install, bookmark loss after system update | PipeWire socket permissions / install-method mismatch |
+
 |---|---|---|---|---|
 | [001](issues/001-spectacle-libjxl-abi-mismatch.md) | Package/ABI | Print Screen / spectacle fails after `pacman -Syu` | `libjxl` soname bump (0.11→0.12) ahead of dependent package rebuild | Downgrade `libjxl` from Arch Archive, lock with `IgnorePkg` |
 
