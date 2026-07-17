@@ -48,10 +48,9 @@ Non-secret configuration files worth version-controlling: PipeWire `filter-chain
 
 ---
 
-## Index
+## After Update Fix
 
 | # | Category | Symptom | Root cause | Fix |
 |---|---|---|---|---|
 | [001](issues/001-spectacle-libjxl-abi-mismatch.md) | Package/ABI | Print Screen / spectacle fails after `pacman -Syu` | `libjxl` soname bump (0.11→0.12) ahead of dependent package rebuild | Downgrade `libjxl` from Arch Archive, lock with `IgnorePkg` |
 
-New entries get added here as they're documented.
