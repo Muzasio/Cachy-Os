@@ -46,20 +46,7 @@ Each script gets a short header comment stating what it assumes about the system
 
 Non-secret configuration files worth version-controlling: PipeWire `filter-chain` definitions, `pacman.conf` patterns (correct `IgnorePkg` placement, etc.), systemd unit overrides.
 
-## Diagnostic method (applies to any new issue)
-
-1. Reproduce the failure directly from a terminal — get the real error, not a systemd notification summary.
-2. Confirm which package/version changed: `grep -iE "<component>" /var/log/pacman.log | tail -30`
-3. Confirm the failure is at the library/binary level, not the app level: `ldd $(which <binary>) | grep -i <missing-lib>`
-4. Check local cache for a working version: `ls /var/cache/pacman/pkg/ | grep <package>`
-5. If not cached, pull from the Arch Linux Archive: `https://archive.archlinux.org/packages/<first-letter>/<package>/`
-6. Downgrade the package that actually changed ABI/behavior — not a package that merely depends on it.
-7. Lock a downgrade with `IgnorePkg` under `[options]` in `/etc/pacman.conf` (placing it under `[multilib]` or any repo section is silently ignored).
-8. Remove the lock once upstream republishes a matched build, then resync.
-
-## Using this with an AI assistant
-
-Paste the relevant `issues/*.md` file before describing a new breakage, and instruct the assistant to follow the diagnostic method above — confirm the failing component with command output before proposing a fix, rather than guessing between reinstall/downgrade/config-edit.
+---
 
 ## Index
 
